@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const Main = () => {
+  const baseUrl = process.env.REACT_APP_BASE_URL
+
   const [newsList, setNewsList] = useState([])
   const [keyword, setKeyword] = useState('김포')
 
   async function getNews() {
-    const response = await axios.get('http://localhost:8080/news', {
+    const response = await axios.get(baseUrl + '/news', {
       params: {
         keyword: keyword,
       },
@@ -39,12 +41,12 @@ const Main = () => {
       {newsList &&
         newsList.map((el, index) => {
           return (
-            <>
-              <a href={el.link} key={index}>
+            <div key={index}>
+              <a href={el.link}>
                 <div dangerouslySetInnerHTML={{ __html: el.title }}></div>
               </a>
               <div dangerouslySetInnerHTML={{ __html: el.description }}></div>
-            </>
+            </div>
           )
         })}
     </div>
