@@ -48,7 +48,7 @@ const NewsContainer = () => {
 
 	const setCookieFunc = () => {
 		if (keywords && keywords.length > 0)
-			setCookie('strKeywords', keywords.join(','), { maxAge: 2000 })
+			setCookie('strKeywords', keywords.join(','), { maxAge: 3600 })
 	}
 
 	const getCookie = (param) => {
