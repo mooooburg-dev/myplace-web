@@ -2,31 +2,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+.header {
+	height: 10px;
+	background-color: #212121;
+}
+
+.container {
+	margin: auto;
 }
 
 .title-container .title-text {
-  font-family: 'Source Code Pro', monospace;
-  margin: 3rem;
+	font-family: 'Source Code Pro', monospace;
+	margin: 3rem;
 }
 
 .news-container .news-item {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 .news-container .news-item .news-title {
-  /* color: purple; */
-  font-weight: bold;
+	/* color: purple; */
+	font-weight: bold;
 }
 .news-container .input-wapper {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
+.news-container .tag-wrapper {
+	margin-bottom: 1.4rem;
+}
+.news-container .tag-keyword {
+	margin: 0 0.4rem 0.4rem 0;
 }
