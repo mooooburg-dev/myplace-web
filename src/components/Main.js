@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 import Header from './Header'
 import NewsContainer from './NewsContainer'
 import TitleContainer from './TitleContainer'
@@ -11,6 +12,7 @@ const Main = () => {
 				<TitleContainer></TitleContainer>
 				<NewsContainer></NewsContainer>
 			</div>
+			<Footer></Footer>
 		</div>
 	)
 }
