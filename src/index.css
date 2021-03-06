@@ -16,8 +16,8 @@ code {
 }
 
 .header {
-	height: 10px;
-	background-color: #212121;
+	/* height: 10px; */
+	/* background-color: #212121; */
 }
 
 .container {
@@ -41,8 +41,13 @@ code {
 }
 
 .news-container .tag-wrapper {
-	margin-bottom: 1.4rem;
+	margin: 1.4rem auto;
 }
 .news-container .tag-keyword {
 	margin: 0 0.4rem 0.4rem 0;
+	width: auto;
+}
+
+.footer {
+	margin: 2rem auto;
 }
