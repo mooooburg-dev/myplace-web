@@ -1,5 +1,5 @@
 {
-	"name": "myplace-web",
+	"name": "Punch Line",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -20,7 +20,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"deploy": "react-scripts build && aws s3 sync ./build s3://punchline.toady --acl public-read --delete && aws cloudfront create-invalidation --distribution-id E1A1AKUJ6JCJ0R --paths '/*'"
+		"deploy": "react-scripts build && aws s3 sync ./build s3://punchline.today --acl public-read --delete && aws cloudfront create-invalidation --distribution-id E31MQI0IYD3OW7 --paths '/*'"
 	},
 	"eslintConfig": {
 		"extends": [
