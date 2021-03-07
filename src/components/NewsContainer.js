@@ -15,7 +15,7 @@ const NewsContainer = () => {
 
 	async function getNews() {
 		if (keyword) {
-			const response = await axios.get(baseUrl + '/news', {
+			const response = await axios.get(baseUrl + '/punchline', {
 				params: {
 					keyword: keyword,
 				},
