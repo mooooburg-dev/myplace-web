@@ -11,7 +11,6 @@ const NewsContainer = () => {
 	const [keyword, setKeyword] = useState('')
 	const [keywords, setKeywords] = useState([])
 	const [cookies, setCookie, removeCookie] = useCookies(['strKeywords'])
-	const [text, setText] = useState('')
 
 	async function getNews() {
 		if (keyword) {
@@ -60,8 +59,7 @@ const NewsContainer = () => {
 			setKeyword(result.split(',')[0])
 			getNews()
 		} else {
-			setKeyword('김포')
-			getNews()
+			setKeyword('')
 		}
 	}
 
@@ -112,7 +110,7 @@ const NewsContainer = () => {
 			<hr />
 			<div className="tag-wrapper">
 				{keywords &&
-					keywords.length > 1 &&
+					keywords.length > 0 &&
 					keywords.map((tag, index) => {
 						return (
 							<button
