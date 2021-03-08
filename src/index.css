@@ -1,5 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 body {
 	margin: 0;
@@ -25,7 +26,9 @@ code {
 }
 
 .title-container .title-text {
-	font-family: 'Source Code Pro', monospace;
+	/* font-family: 'Source Code Pro', monospace; */
+	font-family: 'Abril Fatface', cursive;
+	font-size: 3rem;
 	margin: 3rem;
 }
 
