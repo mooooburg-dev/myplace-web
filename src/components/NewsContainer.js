@@ -100,7 +100,7 @@ const NewsContainer = () => {
 					<div>
 						<button
 							type="submit"
-							className="btn btn-warning btn-lg"
+							className="btn btn-danger btn-lg"
 							onClick={onClickConfirm}>
 							검색
 						</button>
