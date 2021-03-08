@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/18201794/110347615-24639600-8074-11eb-9f92-af2a928d1cde.png)
+
+
 # Punch Line Beta
 
 - 펀치라인 키워드 검색 애플리케이션 구축 목표 제작 중
