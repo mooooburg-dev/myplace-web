@@ -29,7 +29,15 @@ code {
 	/* font-family: 'Source Code Pro', monospace; */
 	font-family: 'Abril Fatface', cursive;
 	font-size: 3rem;
-	margin: 3rem;
+	margin: 2rem auto;
+}
+
+.title-container img {
+	width: 3rem;
+	vertical-align: middle;
+	border-style: none;
+	top: 50%;
+	transform: translate(-8px, -15%);
 }
 
 .news-container .news-item {
