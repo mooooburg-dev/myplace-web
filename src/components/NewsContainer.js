@@ -88,8 +88,8 @@ const NewsContainer = () => {
 	return (
 		<div className="news-container">
 			<div className="input-wapper">
-				<form className="row" onSubmit={handleSubmit}>
-					<div className="col-8">
+				<form className="row input-form" onSubmit={handleSubmit}>
+					<div className="mr-2">
 						<input
 							className="form-control form-control-lg input-place"
 							type="text"
@@ -108,6 +108,11 @@ const NewsContainer = () => {
 				</form>
 			</div>
 			<hr />
+			{newsList.length === 0 && (
+				<div className="no-content text-center">
+					가볍고 빠른 뉴스 검색 - 펀치라인
+				</div>
+			)}
 			<div className="tag-wrapper">
 				{keywords &&
 					keywords.length > 0 &&

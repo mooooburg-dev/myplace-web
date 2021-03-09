@@ -1,5 +1,4 @@
 @import 'bootstrap/dist/css/bootstrap.css';
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 body {
@@ -17,8 +16,6 @@ code {
 }
 
 .header {
-	/* height: 10px; */
-	/* background-color: #212121; */
 }
 
 .container {
@@ -26,7 +23,6 @@ code {
 }
 
 .title-container .title-text {
-	/* font-family: 'Source Code Pro', monospace; */
 	font-family: 'Abril Fatface', cursive;
 	font-size: 3rem;
 	margin: 2rem auto;
@@ -44,19 +40,24 @@ code {
 	margin-bottom: 1rem;
 }
 .news-container .news-item .news-title {
-	/* color: purple; */
 	font-weight: bold;
 }
 .news-container .input-wapper {
-	margin-bottom: 1rem;
+	margin: auto;
+	text-align: center;
 }
-
+.news-container .input-form {
+	display: inline-flex;
+}
 .news-container .tag-wrapper {
 	margin: 1.4rem auto;
 }
 .news-container .tag-keyword {
 	margin: 0 0.4rem 0.4rem 0;
 	width: auto;
+}
+.news-container .no-content {
+	padding: 3rem;
 }
 
 .footer {
