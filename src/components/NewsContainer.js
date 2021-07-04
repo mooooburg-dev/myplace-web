@@ -10,7 +10,7 @@ const NewsContainer = () => {
   const [tempKeyword, setTempKeyword] = useState('')
   const [keyword, setKeyword] = useState('')
   const [keywords, setKeywords] = useState([])
-  const [cookies, setCookie, removeCookie] = useCookies(['strKeywords'])
+  const [cookies, setCookie] = useCookies(['strKeywords'])
 
   async function getNews() {
     if (keyword) {
@@ -61,10 +61,6 @@ const NewsContainer = () => {
     } else {
       setKeyword('')
     }
-  }
-
-  const removeCookieFucnc = () => {
-    removeCookie('strKeywords')
   }
 
   const onChange = (e) => {

@@ -7,12 +7,12 @@ import TitleContainer from './TitleContainer'
 const Main = () => {
   return (
     <div>
-      <Header></Header>
+      <Header />
       <div className="container col-sm-12 col-md-6">
-        <TitleContainer></TitleContainer>
-        <NewsContainer></NewsContainer>
+        <TitleContainer />
+        <NewsContainer />
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   )
 }
