@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useCookies } from 'react-cookie'
 import axios from 'axios'
 import moment from 'moment'
@@ -12,9 +12,9 @@ const NewsContainer = () => {
   const [keywords, setKeywords] = useState([])
   const [cookies, setCookie] = useCookies(['strKeywords'])
 
-  async function getNews() {
+  const getNews = useCallback(() => {
     if (keyword) {
-      const response = await axios.get(baseUrl + '/punchline/list', {
+      const response = axios.get(baseUrl + '/punchline/list', {
         params: {
           keyword: keyword,
         },
@@ -26,42 +26,32 @@ const NewsContainer = () => {
 
       setNewsList(response.data.items.concat())
     }
-  }
-
-  useEffect(() => {
-    setTempKeyword(keyword)
-    getNews()
-  }, [keyword])
-
-  useEffect(() => {
-    getCookie()
-  }, [])
-
-  useEffect(() => {
-    setCookieFunc()
-  }, [keywords])
+  }, [baseUrl, keyword, keywords])
 
   const handleSubmit = (event) => {
     event.preventDefault()
   }
 
-  const setCookieFunc = () => {
+  const setCookieFunc = useCallback(() => {
     if (keywords && keywords.length > 0)
       setCookie('strKeywords', keywords.join(','), { maxAge: 3600 })
-  }
+  }, [setCookie, keywords])
 
-  const getCookie = (param) => {
-    let result = cookies.strKeywords
-    if (result) console.log(result.split(','))
+  const getCookie = useCallback(
+    (param) => {
+      let result = cookies.strKeywords
+      if (result) console.log(result.split(','))
 
-    if (result) {
-      setKeywords(result.split(','))
-      setKeyword(result.split(',')[0])
-      getNews()
-    } else {
-      setKeyword('')
-    }
-  }
+      if (result) {
+        setKeywords(result.split(','))
+        setKeyword(result.split(',')[0])
+        getNews()
+      } else {
+        setKeyword('')
+      }
+    },
+    [getNews, cookies.strKeywords]
+  )
 
   const onChange = (e) => {
     setTempKeyword(e.target.value)
@@ -80,6 +70,19 @@ const NewsContainer = () => {
   const onTagClick = (tag) => {
     setKeyword(tag)
   }
+
+  useEffect(() => {
+    setTempKeyword(keyword)
+    getNews()
+  }, [keyword, getNews])
+
+  useEffect(() => {
+    getCookie()
+  }, [getCookie])
+
+  useEffect(() => {
+    setCookieFunc()
+  }, [setCookieFunc])
 
   return (
     <div className="news-container">
