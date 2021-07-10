@@ -95,7 +95,7 @@ const NewsContainer = () => {
               onChange={onChange}
               onKeyPress={onKeyPress}
               value={tempKeyword}
-            ></input>
+            />
           </div>
           <div>
             <button
@@ -139,7 +139,7 @@ const NewsContainer = () => {
                 <div
                   className="news-title"
                   dangerouslySetInnerHTML={{ __html: el.title }}
-                ></div>
+                />
               </a>
               <div dangerouslySetInnerHTML={{ __html: el.description }}></div>
               <div>[{moment(el.pubDate).format('YYYY-MM-DD')}]</div>
