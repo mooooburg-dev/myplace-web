@@ -4,7 +4,7 @@ const TitleContainer = () => {
   return (
     <div className="title-container">
       <div className="title-text text-center">
-        <img src="/static/imgs/logo.svg" alt="" />
+        <img src="/static/imgs/logo.svg" alt="Logo" />
         Punch Line
       </div>
     </div>

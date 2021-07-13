@@ -20,6 +20,7 @@ const NewsContainer = () => {
         },
       })
 
+      // TODO: find 구문으로 수정하기
       if (keyword !== '' && !keywords.includes(keyword)) {
         setKeywords([...keywords, keyword])
       }
