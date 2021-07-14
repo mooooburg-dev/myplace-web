@@ -29,9 +29,9 @@ const NewsContainer = () => {
     }
   }, [baseUrl, keyword, keywords])
 
-  const handleSubmit = (event) => {
+  const handleSubmit = useCallback((event) => {
     event.preventDefault()
-  }
+  }, [])
 
   const setCookieFunc = useCallback(() => {
     if (keywords && keywords.length > 0)
